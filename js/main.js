@@ -32,6 +32,7 @@ function guardar(){
   var nodotarjeta = document.createTextNode('Agregar Tarjeta');
   tarjetaboton.appendChild(nodotarjeta);
   tarjetaboton.setAttribute("class", "btn-default");
+  
   agregar.appendChild(inputext);
   agregar.appendChild(tarjetaboton);
  
