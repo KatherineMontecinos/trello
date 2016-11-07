@@ -4,14 +4,14 @@ function agregarLista() {
 // elementos que creamos
   var cont = document.createElement('form');
   var input = document.createElement('input');
-  var boton = document.createElement('button');
+  var boton = document.createElement('input');
+  boton.setAttribute('type', 'submit');
 // texto del boton
-  var texto = "Guardar";
-  var textoboton = document.createTextNode(texto);
+  var textoboton = document.createTextNode('Guardar');
   // metemos texto y atributo en boton
   boton.appendChild(textoboton);
   boton.setAttribute("class", "btn-warning");
-  boton.setAttribute("onclick", "guardar()");
+  cont.setAttribute("onsubmit", "return guardar();");
   
   // unir al form con sus elementos input y boton
   cont.appendChild(input);
@@ -37,10 +37,10 @@ function guardar(){
   tarjetaboton.appendChild(nodotarjeta);
   tarjetaboton.setAttribute("class", "btn-default");
 
-
   agregar.appendChild(inputext);
   agregar.appendChild(tarjetaboton);
-
+  /*debugger;*/
+  return false;
 }
 
 
